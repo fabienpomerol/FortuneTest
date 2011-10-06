@@ -1,0 +1,13 @@
+/app/cache/*
+/app/logs/*
+/web/bundles
+/vendor/assetic
+/vendor/bundles
+/vendor/doctrine*
+/vendor/monolog
+/vendor/swiftmailer
+/vendor/symfony
+/vendor/twig*
+/vendor/metadata
+/vendor/phing
+/vendor/propel
