@@ -1,0 +1,4 @@
+OzeoOzeoBundle:
+    resource: "@OzeoOzeoBundle/Resources/config/routing.yml"
+    prefix:   /
+

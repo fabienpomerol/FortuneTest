@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Fortunes{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/ozeoozeo/css/bootstrap.css') }}" />
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('bundles/ozeoozeo/js/boostrap-alerts.js') }}" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".alert-message").alert();
+        </script>
+        {% endblock %}
+    </body>
+</html>

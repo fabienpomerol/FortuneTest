@@ -1,0 +1,7 @@
+OzeoBundle_homepage:
+    pattern:  /
+    defaults: { _controller: OzeoOzeoBundle:Default:index }
+
+OzeoBundle_new:
+    pattern: /ajouter
+    defaults: { _controller: OzeoOzeoBundle:Default:new }

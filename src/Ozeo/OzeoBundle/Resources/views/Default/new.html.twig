@@ -1,0 +1,27 @@
+{% extends 'OzeoOzeoBundle::default.html.twig' %}
+
+{% block row %}
+  <form action="{{ path('OzeoBundle_new') }}" method="post" {{ form_enctype(form) }}>
+
+    <div class="row">
+      <div class="span16">
+      <h2>Votre fortune</h2><br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span11">
+          {{ form_widget(form.content, { 'attr': {'class': 'xxlarge'} }) }}
+       <span class="help-block">
+         <br/>
+         procédez de la façon suivante : @john blablabla @kelly YEAH!!!!
+         <br/>
+         le nom de la personne précédé d'un @ détermine l'orateur
+       </span>
+      </div>
+      <div class="span5">
+        <input type="submit" class="btn large primary" />
+      </div>
+    </div>
+    {{ form_rest(form) }}
+  </form>
+{% endblock %}

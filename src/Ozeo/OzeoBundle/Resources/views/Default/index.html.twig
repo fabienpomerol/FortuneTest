@@ -1,0 +1,23 @@
+{% extends 'OzeoOzeoBundle::default.html.twig' %}
+
+{% block row %}
+  {% for fortune in fortunes %}
+    <div class="row">
+    <div class="span16">
+        <p>Ajouté le {{ fortune.createdAt }}</p>
+    </div>
+    <div class="span4">
+        <p><strong>@FabienP</strong></p>
+        <p>@JohnH</p>
+    </div>
+    <div class="span8">
+        <p>{{ fortune.content }}</p>
+    </div>
+    <div class="span2">
+        <h2>{{ fortune.score }}</h2>
+        <p><a class="btn success">+1</a>&nbsp;<a class="btn danger">-1</a></p>
+    </div>
+    </div>
+  {% endfor %}
+
+{% endblock %}

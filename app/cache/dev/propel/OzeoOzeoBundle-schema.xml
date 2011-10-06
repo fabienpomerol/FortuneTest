@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" namespace="Ozeo\OzeoBundle\Model" defaultIdMethod="native" package="var/www/ozeo/src/Ozeo/OzeoBundle/Model">
+
+    <table name="fortune" package="var/www/ozeo/src/Ozeo/OzeoBundle/Model">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="content" type="longvarchar" primaryString="1" required="true"/>
+        <column name="score" type="integer" required="true" default="0"/>
+        <behavior name="timestampable"/>
+    </table>
+
+</database>

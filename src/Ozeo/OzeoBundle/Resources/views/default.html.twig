@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+  {% block menubar %}
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">Ozeo Web</a>
+          <ul class="nav">
+            <li {% if is_homepage is defined %} class="active" {% endif %}><a href="{{ path('OzeoBundle_homepage') }}">Accueil</a></li>
+            <li><a href="#tralal">Top 10</a></li>
+            <li {% if is_new is defined %} class="active" {% endif %}><a href="{{ path('OzeoBundle_new') }}">Ajouter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+  {# beginning of the block 'container' #}
+  {% block container%}
+    <div class="container">
+
+      {% block header %}
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Ozeo Fortunes</h1>
+        <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <p><a href="{{ path('OzeoBundle_new')}}" class="btn primary large">Ajouter une fortune &raquo;</a></p>
+      </div>
+      {% endblock %}
+
+      <div class="alert-message success">
+        <a class="close" href="#">×</a>
+        <p><strong>Votre fortune a bien été enregistrée</strong>. Bien joué !.</p>
+      </div>
+      {% block row %}
+
+      {% endblock %}
+
+      {% block footer%}
+        <footer>
+          <p>&copy; Powered by Symfony2 & Propel ORM</p>
+        </footer>
+      {% endblock %}
+
+    </div> <!-- /container -->
+    {% endblock %}
+    {# end of the block 'container' #}
+{% endblock %}
+
